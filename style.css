@@ -1,0 +1,798 @@
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+ :root {
+    --primary: #1D1E21;
+    --secondary: #798cb4;
+    --light: #003074;
+ } 
+
+ body {
+     background-color: var(--primary);
+     color: var(--secondary);
+ }
+
+ h1 {
+    font-size: var(--med);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+ }
+
+.main_container {
+      padding: 100px;
+      margin: 10px;
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+      grid-gap: 20px;
+      border: 1px solid blue;
+  }
+
+h2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ 
+/* Moon */
+
+.habit-containerMO-outer{
+    border: 1px solid white;
+    padding: 10px;
+}
+.habit-containerMO{
+    border: 1px solid blue; 
+}
+
+.habit-containerMO .inputfieldMO {
+    display: flex;
+    height: 30px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.inputfieldMO input {
+    width: 85%;
+    height: 100%;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    border-radius: 3px;
+    padding-left: 7px;
+}
+
+.inputfieldMO button {
+    width: 30px;
+    height: 100%; 
+    border: none;
+    outline: none;
+    background: #8e49E9;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 5px; 
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.inputfieldMO button.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.habit-containerMO .todoList {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.todoListMO li{
+    list-style-type: none;
+    height: 35px; 
+    line-height: 40px;
+    position: relative;
+    background: #1D1E21;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    padding: 0 15px;
+    cursor: default;
+    overflow: hidden;
+}
+
+.todoListMO li span{
+    position: absolute;
+    right: -45px; 
+    color: #fff;
+    width: 35px;
+    background: green;
+    height: 35px; 
+    line-height: 40px;
+    border-radius: 0 3px 3px 0;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+}
+
+.todoListMO li:hover span{
+    right: 0px;
+}
+
+.habit-containerMO .footer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-top: 15px;
+    justify-content: space-between;
+}
+
+.footerMO button{
+    border: none; 
+    outline: none;
+    background: #8e49E9;
+    color: #fff;
+    font-size: 16px;
+    margin-left: 10px;
+    border-radius: 3px;
+    padding: 5px 8px;
+    cursor: pointer;
+}
+
+.footerMO button.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Mars */
+
+.habit-containerMA-outer {
+    border: 1px solid red;
+    padding: 10px;
+}
+
+.habit-containerMA {
+    border: 1px solid red;
+  }
+
+.habit-containerMA .inputfieldMA {
+    display: flex;
+    height: 30px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.inputfieldMA input {
+    width: 85%;
+    height: 100%;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    border-radius: 3px;
+    padding-left: 7px;
+}
+
+.inputfieldMA button {
+    width: 30px;
+    height: 100%; 
+    border: none;
+    outline: none;
+    background: #8e49E9;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 5px; 
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.inputfieldMA button.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.habit-containerMA .todoList {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.todoListMA li{
+    list-style-type: none;
+    height: 35px; 
+    line-height: 40px;
+    position: relative;
+    background: #1D1E21;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    padding: 0 15px;
+    cursor: default;
+    overflow: hidden;
+}
+
+.todoListMA li span{
+    position: absolute;
+    right: -45px; 
+    color: #fff;
+    width: 35px;
+    background: green;
+    height: 35px; 
+    line-height: 40px;
+    border-radius: 0 3px 3px 0;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+}
+
+.todoListMA li:hover span{
+    right: 0px;
+}
+
+.habit-containerMA .footer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-top: 15px;
+    justify-content: space-between;
+}
+
+.footerMA button{
+    border: none; 
+    outline: none;
+    background: #8e49E9;
+    color: #fff;
+    font-size: 16px;
+    margin-left: 10px;
+    border-radius: 3px;
+    padding: 5px 8px;
+    cursor: pointer;
+}
+
+.footerMA button.active{
+    opacity: 1;
+    pointer-events: auto;
+}  
+
+/* Mercury */
+
+.habit-containerME-outer {
+    border: 1px solid green;
+    padding: 10px;
+}
+
+.habit-containerME {
+    border: 1px solid green;
+  }
+
+.habit-containerME .inputfieldME {
+    display: flex;
+    height: 30px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.inputfieldME input {
+    width: 85%;
+    height: 100%;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    border-radius: 3px;
+    padding-left: 7px;
+}
+
+.inputfieldME button {
+    width: 30px;
+    height: 100%; 
+    border: none;
+    outline: none;
+    background: #8e49E9;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 5px; 
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.inputfieldME button.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.habit-containerME .todoList {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.todoListME li{
+    list-style-type: none;
+    height: 35px; 
+    line-height: 40px;
+    position: relative;
+    background: #1D1E21;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    padding: 0 15px;
+    cursor: default;
+    overflow: hidden;
+}
+
+.todoListME li span{
+    position: absolute;
+    right: -45px; 
+    color: #fff;
+    width: 35px;
+    background: green;
+    height: 35px; 
+    line-height: 40px;
+    border-radius: 0 3px 3px 0;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+}
+
+.todoListME li:hover span{
+    right: 0px;
+}
+
+.habit-containerME .footer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-top: 15px;
+    justify-content: space-between;
+}
+
+.footerME button{
+    border: none; 
+    outline: none;
+    background: #8e49E9;
+    color: #fff;
+    font-size: 16px;
+    margin-left: 10px;
+    border-radius: 3px;
+    padding: 5px 8px;
+    cursor: pointer;
+}
+
+.footerME button.active{
+    opacity: 1;
+    pointer-events: auto;
+}  
+
+
+/* Jupiter */
+
+.habit-containerJU-outer {
+    border: 1px solid yellow;
+    padding: 10px;
+}
+
+.habit-containerJU {
+    border: 1px solid yellow;
+  }
+
+.habit-containerJU .inputfieldJU {
+    display: flex;
+    height: 30px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.inputfieldJU input {
+    width: 85%;
+    height: 100%;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    border-radius: 3px;
+    padding-left: 7px;
+}
+
+.inputfieldJU button {
+    width: 30px;
+    height: 100%; 
+    border: none;
+    outline: none;
+    background: #8e49E9;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 5px; 
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.inputfieldJU button.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.habit-containerJU .todoList {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.todoListJU li{
+    list-style-type: none;
+    height: 35px; 
+    line-height: 40px;
+    position: relative;
+    background: #1D1E21;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    padding: 0 15px;
+    cursor: default;
+    overflow: hidden;
+}
+
+.todoListJU li span{
+    position: absolute;
+    right: -45px; 
+    color: #fff;
+    width: 35px;
+    background: green;
+    height: 35px; 
+    line-height: 40px;
+    border-radius: 0 3px 3px 0;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+}
+
+.todoListJU li:hover span{
+    right: 0px;
+}
+
+.habit-containerJU .footer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-top: 15px;
+    justify-content: space-between;
+}
+
+.footerJU button{
+    border: none; 
+    outline: none;
+    background: #8e49E9;
+    color: #fff;
+    font-size: 16px;
+    margin-left: 10px;
+    border-radius: 3px;
+    padding: 5px 8px;
+    cursor: pointer;
+}
+
+.footerJU button.active{
+    opacity: 1;
+    pointer-events: auto;
+}  
+
+/* Venus */
+
+.habit-containerVE-outer {
+    border: 1px solid purple;
+    padding: 10px;
+}
+
+.habit-containerVE {
+    border: 1px solid purple;
+  }
+
+.habit-containerVE .inputfieldVE {
+    display: flex;
+    height: 30px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.inputfieldVE input {
+    width: 85%;
+    height: 100%;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    border-radius: 3px;
+    padding-left: 7px;
+}
+
+.inputfieldVE button {
+    width: 30px;
+    height: 100%; 
+    border: none;
+    outline: none;
+    background: #8e49E9;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 5px; 
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.inputfieldVE button.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.habit-containerVE .todoList {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.todoListVE li{
+    list-style-type: none;
+    height: 35px; 
+    line-height: 40px;
+    position: relative;
+    background: #1D1E21;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    padding: 0 15px;
+    cursor: default;
+    overflow: hidden;
+}
+
+.todoListVE li span{
+    position: absolute;
+    right: -45px; 
+    color: #fff;
+    width: 35px;
+    background: green;
+    height: 35px; 
+    line-height: 40px;
+    border-radius: 0 3px 3px 0;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+}
+
+.todoListVE li:hover span{
+    right: 0px;
+}
+
+.habit-containerVE .footer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-top: 15px;
+    justify-content: space-between;
+}
+
+.footerVE button{
+    border: none; 
+    outline: none;
+    background: #8e49E9;
+    color: #fff;
+    font-size: 16px;
+    margin-left: 10px;
+    border-radius: 3px;
+    padding: 5px 8px;
+    cursor: pointer;
+}
+
+.footerVE button.active{
+    opacity: 1;
+    pointer-events: auto;
+}  
+
+/* Saturday */
+
+.habit-containerSA-outer {
+    border: 1px solid blue;
+    padding: 10px;
+}
+
+.habit-containerSA {
+    border: 1px solid blue;
+  }
+
+.habit-containerSA .inputfieldSA {
+    display: flex;
+    height: 30px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.inputfieldSA input {
+    width: 85%;
+    height: 100%;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    border-radius: 3px;
+    padding-left: 7px;
+}
+
+.inputfieldSA button {
+    width: 30px;
+    height: 100%; 
+    border: none;
+    outline: none;
+    background: #8e49E9;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 5px; 
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.inputfieldSA button.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.habit-containerSA .todoList {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.todoListSA li{
+    list-style-type: none;
+    height: 35px; 
+    line-height: 40px;
+    position: relative;
+    background: #1D1E21;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    padding: 0 15px;
+    cursor: default;
+    overflow: hidden;
+}
+
+.todoListSA li span{
+    position: absolute;
+    right: -45px; 
+    color: #fff;
+    width: 35px;
+    background: green;
+    height: 35px; 
+    line-height: 40px;
+    border-radius: 0 3px 3px 0;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+}
+
+.todoListSA li:hover span{
+    right: 0px;
+}
+
+.habit-containerSA .footer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-top: 15px;
+    justify-content: space-between;
+}
+
+.footerSA button{
+    border: none; 
+    outline: none;
+    background: #8e49E9;
+    color: #fff;
+    font-size: 16px;
+    margin-left: 10px;
+    border-radius: 3px;
+    padding: 5px 8px;
+    cursor: pointer;
+}
+
+.footerSA button.active{
+    opacity: 1;
+    pointer-events: auto;
+}  
+
+/* Sunday */
+
+.habit-containerSU-outer {
+    border: 1px solid orange;
+    padding: 10px;
+}
+
+.habit-containerSU {
+    border: 1px solid orange;
+  }
+
+.habit-containerSU .inputfieldSU {
+    display: flex;
+    height: 30px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.inputfieldSU input {
+    width: 85%;
+    height: 100%;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    border-radius: 3px;
+    padding-left: 7px;
+}
+
+.inputfieldSU button {
+    width: 30px;
+    height: 100%; 
+    border: none;
+    outline: none;
+    background: #8e49E9;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 5px; 
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.inputfieldSU button.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.habit-containerSU .todoList {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.todoListSU li{
+    list-style-type: none;
+    height: 35px; 
+    line-height: 40px;
+    position: relative;
+    background: #1D1E21;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    padding: 0 15px;
+    cursor: default;
+    overflow: hidden;
+}
+
+.todoListSU li span{
+    position: absolute;
+    right: -45px; 
+    color: #fff;
+    width: 35px;
+    background: green;
+    height: 35px; 
+    line-height: 40px;
+    border-radius: 0 3px 3px 0;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+}
+
+.todoListSU li:hover span{
+    right: 0px;
+}
+
+.habit-containerSU .footer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-top: 15px;
+    justify-content: space-between;
+}
+
+.footerSU button{
+    border: none; 
+    outline: none;
+    background: #8e49E9;
+    color: #fff;
+    font-size: 16px;
+    margin-left: 10px;
+    border-radius: 3px;
+    padding: 5px 8px;
+    cursor: pointer;
+}
+
+.footerSU button.active{
+    opacity: 1;
+    pointer-events: auto;
+}  
+
+
